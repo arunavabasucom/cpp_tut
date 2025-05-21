@@ -1,5 +1,6 @@
 
 #include <bits/stdc++.h>
+#include "io_setup.h"
 using namespace std;
 void printBinary(int num) {
     for (int i = 10; i >= 0;--i) {
@@ -11,10 +12,7 @@ void printBinary(int num) {
 
 
 int main() {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
+
     /*
     1. odo even using bit manupulation
     */
@@ -124,7 +122,8 @@ int main() {
     /*
     5. check the number is 2 to power or not
     */
-    int n = 16;
+    int n;
+    cin >> n;
     if ((n & (n - 1)))
         cout << "not to 2 to the power";
     else
