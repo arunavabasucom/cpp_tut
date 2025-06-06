@@ -1,6 +1,14 @@
+/* (5)
+1. odo even using bit manupulation
+2. multiply and divide by 2
+3. lowercase to uppercase
+4. unset all of the LSB bits
+5. unset all of the MSB bits
+6. check the number is 2 to power or not
+*/
 
 #include <bits/stdc++.h>
-#include "io_setup.h"
+#include <io_setup.h>
 using namespace std;
 void printBinary(int num) {
     for (int i = 10; i >= 0;--i) {
@@ -120,7 +128,7 @@ int main() {
 
 
     /*
-    5. check the number is 2 to power or not
+    6. check the number is 2 to power or not
     */
     int n;
     cin >> n;

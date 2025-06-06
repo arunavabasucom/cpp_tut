@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <functional>
+#include "io_setup.h"
 using namespace std;
 // function pointers 
 // void hello(){
