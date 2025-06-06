@@ -1,3 +1,8 @@
+## cpp tuts 
+
 ```bash
-g++-14 main.cpp && ./a.out
+# for compilation
+m 
+# for cleanup
+mc 
 ```
