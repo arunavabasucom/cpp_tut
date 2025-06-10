@@ -2,7 +2,7 @@
  * Binary Exponentiation (10 11)  
  */
 #include <io_setup.h>
- #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 const int MOD = 1e7; // it make sure the the number is alwasys within that
 /**
