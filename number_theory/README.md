@@ -116,8 +116,11 @@ int halved = n >> 1;
 
 
 $$\phi(n) = n \prod_{p \mid n} \left(1 - \frac{1}{p}\right)$$
+
 for prime -
+
 $$\phi(n) = n  \left(1 - \frac{1}{n}\right) = n-1$$
+
 Where:  
 - $n$ = Positive integer  
 - $p$ $\mid$ $n$ = All distinct prime divisors of $n$
