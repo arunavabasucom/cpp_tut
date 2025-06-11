@@ -14,6 +14,8 @@
     - [32-bit Integer Limits](#32-bit-integer-limits)
     - [Bit Terminology](#bit-terminology)
   - [Usage Examples](#usage-examples)
+    - [Euler's Totient Function (φ)](#eulers-totient-function-φ)
+    - [Euler's Theorem](#eulers-theorem)
 
 ## Modular Arithmetic Formulas
 
@@ -110,7 +112,41 @@ int doubled = n << 1;
 // Right shift (divide by 2)
 int halved = n >> 1;
 ```
+### Euler's Totient Function (φ)
+
+
+$$\phi(n) = n \prod_{p \mid n} \left(1 - \frac{1}{p}\right)$$
+for prime -
+$$\phi(n) = n  \left(1 - \frac{1}{n}\right) = n-1$$
+Where:  
+- $n$ = Positive integer  
+- $p$ $\mid$ $n$ = All distinct prime divisors of $n$
+
+Example - 
+
+$\phi(5) = 5 \left(1 - \frac{1}{5}\right) = 5 \cdot \frac{4}{5} = 4$
+
+$\phi(6) = 6 \left(1 - \frac{1}{2}\right) \left(1 - \frac{1}{3}\right) = 6 \cdot \frac{1}{2} \cdot \frac{2}{3} = 2$
+
+### Euler's Theorem
+
+$$1.a^{b} \equiv a^{b\mod\phi(n)} \mod(n)$$
+$$2.(a^{b}\mod n) \equiv (a^{b\mod\phi(n)})\mod n$$ 
+ 
+$$3.(a^{b}\mod M)=(a^{b\mod\phi(M)})\mod M$$
+
+Generalized formula -
+
+$$(a^{b}\mod M) \equiv (a^{b\mod\phi(M)})\mod M  \ (M = Any \ integer)$$
+
+$$(a^{b}\mod M) \equiv (a^{b\mod(M-1)})\mod M  \ (M = Prime \ number)$$
+
+
+
+
+**Where:**  
+- $\phi(n)$ is Euler’s Totient Function  
+- $\gcd(a, n)$ is the greatest common divisor of $a$ and $n$
 
 ---
 
-*This README covers fundamental concepts in modular arithmetic and bitwise operations commonly used in competitive programming and computer science.*
