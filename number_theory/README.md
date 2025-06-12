@@ -16,6 +16,8 @@
   - [Usage Examples](#usage-examples)
     - [Euler's Totient Function (φ)](#eulers-totient-function-φ)
     - [Euler's Theorem](#eulers-theorem)
+    - [Prime Factorization](#prime-factorization)
+  - [$$(1+2+4)\*(1+3+9)$$](#124139)
 
 ## Modular Arithmetic Formulas
 
@@ -117,7 +119,7 @@ int halved = n >> 1;
 
 $$\phi(n) = n \prod_{p \mid n} \left(1 - \frac{1}{p}\right)$$
 
-for prime -
+For prime -
 
 $$\phi(n) = n  \left(1 - \frac{1}{n}\right) = n-1$$
 
@@ -151,5 +153,28 @@ $$(a^{b}\mod M) \equiv (a^{b\mod(M-1)})\mod M  \ (M = Prime \ number)$$
 - $\phi(n)$ is Euler’s Totient Function  
 - $\gcd(a, n)$ is the greatest common divisor of $a$ and $n$
 
+### Prime Factorization 
+
+$$x=p_{1}^{n_{1}}*p_{2}^{n_{2}}*p_{3}^{n_{3}}\dots*p_{t}^{n_{t}}$$
+
+Total divisors count - 
+
+$$(n_{1}+1)*(n_{2}+1)*(n_{3}+1) \dots*(n_{t}+1)$$
+
+Example -
+
+$$36=2^{2}*3^{2}$$ 
+
+$$(2+1)*(2+1)=9$$
+
+Total sum -
+
+$$(1+p_{1}+p_{1}^2+p_{1}^3\dots+p_{1}^{n1})*(1+p_{2}+p_{2}^2+p_{2}^3\dots+p_{2}^{n2})\\*(1+p_{3}+p_{3}^2+p_{3}^3\dots+p_{3}^{n3})$$
+
+$$=\frac{p_{1}^{n1}-1}{p_{1}-1}*\frac{p_{2}^{n2}-1}{p_{2}-1}*\frac{p_{3}^{n3}-1}{p_{3}-1}\dots*\frac{p_{t}^{nt}-1}{p_{t}-1}$$
+Example -
+
+$$36=2^{2}*3^{2}$$ 
+$$(1+2+4)*(1+3+9)$$
 ---
 
