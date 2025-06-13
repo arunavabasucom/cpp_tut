@@ -17,7 +17,8 @@
     - [Euler's Totient Function (φ)](#eulers-totient-function-φ)
     - [Euler's Theorem](#eulers-theorem)
     - [Prime Factorization](#prime-factorization)
-  - [$$(1+2+4)\*(1+3+9)$$](#124139)
+    - [Fermat little  Theorem -](#fermat-little--theorem--)
+  - [$$\\text{If } m \\text{ is prime, } a \\not\\equiv 0 \\pmod{m}\\text{ and a is not multiple of m} \\text{ then } a^{m-1} \\equiv 1 \\pmod{m} $$](#textif--m-text-is-prime--a-notequiv-0-pmodmtext-and-a-is-not-multiple-of-m-text-then--am-1-equiv-1-pmodm-)
 
 ## Modular Arithmetic Formulas
 
@@ -26,7 +27,9 @@ Basic modular arithmetic operations:
 1. **Addition**: $(a + b) \bmod m = ((a \bmod m) + (b \bmod m)) \bmod m$
 2. **Subtraction**: $(a - b) \bmod m = ((a \bmod m) - (b \bmod m) + m) \bmod m$
 3. **Multiplication**: $(a \cdot b) \bmod m = ((a \bmod m) \cdot (b \bmod m)) \bmod m$
-4. **Division**: $\frac{a}{b} \bmod m = a \cdot b^{-1} \bmod m$
+4. **Division**: $\frac{a}{b} \bmod m = a \cdot b^{-1} \bmod m$ 
+   
+   $b^{-1} \bmod m$ is MMI of $b$
 
 ## Why Use $10^9 + 7$?
 
@@ -176,5 +179,9 @@ Example -
 
 $$36=2^{2}*3^{2}$$ 
 $$(1+2+4)*(1+3+9)$$
+
+### Fermat little  Theorem -
+
+$$\text{If } m \text{ is prime, } a \not\equiv 0 \pmod{m}\text{ and a is not multiple of m} \text{ then } a^{m-1} \equiv 1 \pmod{m} $$
 ---
 
