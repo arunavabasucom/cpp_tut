@@ -17,8 +17,10 @@
     - [Euler's Totient Function (φ)](#eulers-totient-function-φ)
     - [Euler's Theorem](#eulers-theorem)
     - [Prime Factorization](#prime-factorization)
-    - [Fermat little  Theorem -](#fermat-little--theorem--)
-  - [$$\\text{If } m \\text{ is prime, } a \\not\\equiv 0 \\pmod{m}\\text{ and a is not multiple of m} \\text{ then } a^{m-1} \\equiv 1 \\pmod{m} $$](#textif--m-text-is-prime--a-notequiv-0-pmodmtext-and-a-is-not-multiple-of-m-text-then--am-1-equiv-1-pmodm-)
+    - [Total Number of Divisors](#total-number-of-divisors)
+    - [Sum of All Divisors](#sum-of-all-divisors)
+  - [Fermat's Little Theorem](#fermats-little-theorem)
+  - [**Note:** The condition can be stated as either "$a \\not\\equiv 0 \\pmod{p}$" or "$a$ is not a multiple of $p$" or "$\\gcd(a, p) = 1$" - they are all equivalent when $p$ is prime.](#note-the-condition-can-be-stated-as-either-a-notequiv-0-pmodp-or-a-is-not-a-multiple-of-p-or-gcda-p--1---they-are-all-equivalent-when-p-is-prime)
 
 ## Modular Arithmetic Formulas
 
@@ -156,32 +158,48 @@ $$(a^{b}\mod M) \equiv (a^{b\mod(M-1)})\mod M  \ (M = Prime \ number)$$
 - $\phi(n)$ is Euler’s Totient Function  
 - $\gcd(a, n)$ is the greatest common divisor of $a$ and $n$
 
-### Prime Factorization 
 
-$$x=p_{1}^{n_{1}}*p_{2}^{n_{2}}*p_{3}^{n_{3}}\dots*p_{t}^{n_{t}}$$
 
-Total divisors count - 
+### Prime Factorization
 
-$$(n_{1}+1)*(n_{2}+1)*(n_{3}+1) \dots*(n_{t}+1)$$
+For any positive integer $x$, the prime factorization is:
+$$x = p_1^{n_1} \cdot p_2^{n_2} \cdot p_3^{n_3} \cdots p_t^{n_t}$$
 
-Example -
+where $p_1, p_2, p_3, \ldots, p_t$ are distinct prime factors and $n_1, n_2, n_3, \ldots, n_t$ are their respective exponents.
 
-$$36=2^{2}*3^{2}$$ 
+### Total Number of Divisors
 
-$$(2+1)*(2+1)=9$$
+The total count of divisors is:
+$$(n_1 + 1)(n_2 + 1)(n_3 + 1) \cdots (n_t + 1)$$
 
-Total sum -
+**Example:**
+$$36 = 2^2 \cdot 3^2$$
+Number of divisors = $(2 + 1)(2 + 1) = 3 \cdot 3 = 9$
 
-$$(1+p_{1}+p_{1}^2+p_{1}^3\dots+p_{1}^{n1})*(1+p_{2}+p_{2}^2+p_{2}^3\dots+p_{2}^{n2})\\*(1+p_{3}+p_{3}^2+p_{3}^3\dots+p_{3}^{n3})$$
+### Sum of All Divisors
 
-$$=\frac{p_{1}^{n1}-1}{p_{1}-1}*\frac{p_{2}^{n2}-1}{p_{2}-1}*\frac{p_{3}^{n3}-1}{p_{3}-1}\dots*\frac{p_{t}^{nt}-1}{p_{t}-1}$$
-Example -
+The sum of all divisors is:
+$$(1 + p_1 + p_1^2 + p_1^3 + \cdots + p_1^{n_1})(1 + p_2 + p_2^2 + p_2^3 + \cdots + p_2^{n_2}) \cdots$$
 
-$$36=2^{2}*3^{2}$$ 
-$$(1+2+4)*(1+3+9)$$
+Using the geometric series formula, this simplifies to:
+$$\frac{p_1^{n_1+1} - 1}{p_1 - 1} \cdot \frac{p_2^{n_2+1} - 1}{p_2 - 1} \cdot \frac{p_3^{n_3+1} - 1}{p_3 - 1} \cdots \frac{p_t^{n_t+1} - 1}{p_t - 1}$$
 
-### Fermat little  Theorem -
+**Example:**
+$$36 = 2^2 \cdot 3^2$$
+Sum of divisors = $(1 + 2 + 4)(1 + 3 + 9) = 7 \cdot 13 = 91$
 
-$$\text{If } m \text{ is prime, } a \not\equiv 0 \pmod{m}\text{ and a is not multiple of m} \text{ then } a^{m-1} \equiv 1 \pmod{m} $$
+Or using the formula:
+$$\frac{2^3 - 1}{2 - 1} \cdot \frac{3^3 - 1}{3 - 1} = \frac{7}{1} \cdot \frac{26}{2} = 7 \cdot 13 = 91$$
+
+## Fermat's Little Theorem
+
+If $p$ is prime and $a$ is not divisible by $p$ (i.e., $\gcd(a, p) = 1$), then:
+$$a^{p-1} \equiv 1 \pmod{p}$$
+
+**Alternative form:**
+For any integer $a$ and prime $p$:
+$$a^p \equiv a \pmod{p}$$
+
+**Note:** The condition can be stated as either "$a \not\equiv 0 \pmod{p}$" or "$a$ is not a multiple of $p$" or "$\gcd(a, p) = 1$" - they are all equivalent when $p$ is prime.
 ---
 
