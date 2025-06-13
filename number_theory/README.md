@@ -20,7 +20,6 @@
     - [Total Number of Divisors](#total-number-of-divisors)
     - [Sum of All Divisors](#sum-of-all-divisors)
   - [Fermat's Little Theorem](#fermats-little-theorem)
-  - [**Note:** The condition can be stated as either "$a \\not\\equiv 0 \\pmod{p}$" or "$a$ is not a multiple of $p$" or "$\\gcd(a, p) = 1$" - they are all equivalent when $p$ is prime.](#note-the-condition-can-be-stated-as-either-a-notequiv-0-pmodp-or-a-is-not-a-multiple-of-p-or-gcda-p--1---they-are-all-equivalent-when-p-is-prime)
 
 ## Modular Arithmetic Formulas
 
@@ -199,7 +198,8 @@ $$a^{p-1} \equiv 1 \pmod{p}$$
 **Alternative form:**
 For any integer $a$ and prime $p$:
 $$a^p \equiv a \pmod{p}$$
+The condition can be stated as either "$a \not\equiv 0 \pmod{p}$" or "$a$ is not a multiple of $p$" or "$\gcd(a, p) = 1$" - they are all equivalent when $p$ is prime.
 
-**Note:** The condition can be stated as either "$a \not\equiv 0 \pmod{p}$" or "$a$ is not a multiple of $p$" or "$\gcd(a, p) = 1$" - they are all equivalent when $p$ is prime.
----
+Note: The condition can be stated as either $a \not\equiv 0 \pmod{p}$ or "$a$ is not a multiple of $p$" or $\gcd(a, p) = 1$ - they are all equivalent when $p$ is prime.
+
 
