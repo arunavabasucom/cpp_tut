@@ -116,7 +116,7 @@
         "text_encoding": "cpp",
         "thread": "cpp"
     },
-    "editor.fontSize": 16,
+    // "editor.fontSize": 16,
     "memory-view.showMemoryPanel": true,
     "github.copilot.enable": {
         "*": false,
