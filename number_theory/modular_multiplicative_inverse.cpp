@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int MOD = 1e9 + 7;
-int inverse(int a, long long b, int m) {
+int modulerInverse(int a, long long b, int m) {
     // but we can directly pass b value to 10^18
     int ans = 1;
     while (b) {
@@ -37,7 +37,6 @@ int main() {
      * (a%M * b%M)%M =1
      * we can find MMI only is a and M is co-prime.
 */
-    //  
     // cout << inverse(n, MOD - 2, MOD);
     fact[0] = 1;
     for (int i = 1; i < N;i++) {
@@ -49,11 +48,10 @@ int main() {
         int n,k;
         cin >> n >> k;
         int ans = fact[n];
-        int dect = (fact[n - k] * fact[k])%MOD;
-        ans = (1LL * ans * inverse(dect, MOD - 2, MOD))%MOD;
+        int dect = ((fact[n - k] * fact[k])%MOD);
+        ans = (1LL * ans * modulerInverse(dect, MOD - 2, MOD)) % MOD;
         cout << ans << endl;
     }
-
 
     return 0;
 }

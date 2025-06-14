@@ -1,2 +1,2 @@
 all:
-	g++-14 -Iincludes ${file} -o a.out && ./a.out
+	g++-14 -include includes/io_setup.h ${file} -o a.out && ./a.out
